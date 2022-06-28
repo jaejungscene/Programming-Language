@@ -1,0 +1,55 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {//C compile
+            "label": "gcc build active file",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/exe_file/${fileBasenameNoExtension}"
+            ],
+            "group": "build",
+            "presentation": {
+                // Reveal the output only if unrecognized errors occur.
+                "reveal": "silent"
+            },
+            // Use the standard MS compiler pattern to detect errors, warnings and infos
+            "problemMatcher": "$gcc"
+        },
+
+        {//C++ compile
+            "label": "g++ build active file",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "${fileBasename}",
+                "-o",
+                "${fileDirname}/exe_file/${fileBasenameNoExtension}"
+            ],
+            "group": "build",
+            "presentation": {
+                // Reveal the output only if unrecognized errors occur.
+                "reveal": "silent"
+            },
+            // Use the standard MS compiler pattern to detect errors, warnings and infos
+            "problemMatcher": "$gcc"
+        },
+
+        {//RUN test
+            "type": "shell",
+            "label": "RUN file",
+            "command": "${fileDirname}/exe_file/${fileBasenameNoExtension}",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": "test"
+        }
+        
+    ]
+}
