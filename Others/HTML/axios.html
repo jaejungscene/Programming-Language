@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      axios.get('https://jsonplaceholder.typicode.com/todos/1').then(function(result){
+        console.log('통신 결과 : \n', result);
+      }).catch(function(err){
+        console.log('에러 바랭 : ', err);
+      });
+      console.log('이 코드는 바로 실행된다.');
+    </script>
+  </head>
+  <body>
+
+  </body>
+
+</html>
