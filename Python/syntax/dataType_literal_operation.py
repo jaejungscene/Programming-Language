@@ -18,9 +18,9 @@ x = ("apple", "banana", "cherry")	 #tuple(처음 정의하면 그 후로는 값�
 x = range(6)	#range	
 x = {"name" : "John", "vector" : [1,2,3]}	 #dict	
 x = {"apple", "banana", "cherry"}	 #set(값을 바꿀 수는 없지만 값을 set에 추가할 수 있음)
-x = frozenset({"apple", "banana", "cherry"})	#frozenset	
-x = True	#bool	
-x = b"Hello"	#bytes
+x = frozenset({"apple", "banana", "cherry"})	#frozenset(immutable: 값을 삭제 및 추가할 수 있음)
+x = True	#bool
+x = b"Hello" #bytes
 x = bytearray(5)	#bytearray
 x = memoryview(bytes(5))  #memoryview
 

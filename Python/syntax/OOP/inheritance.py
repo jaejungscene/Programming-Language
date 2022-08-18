@@ -1,19 +1,3 @@
-#method overloading is not possible in python
-
-#method overriding
-class Parent(object):
-  def __init__(self):
-    self.value = 4
-  def get_value(self):
-    return self.value
- 
-class Child(Parent):
-  def get_value(self):
-    return self.value + 1
-
-child = Child()
-print(child.get_value())
-
 #inheritance
 class Pet:
   def __init__(self, name, age, sound, type):
