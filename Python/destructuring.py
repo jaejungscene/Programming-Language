@@ -3,6 +3,8 @@ def getArr():
   n2 = [5,4,3]
   return n1, n2
 
+print(type(getArr()))
+
 (x, y) = \
   getArr()
 print(f"x is {x}\ny is {y}")
