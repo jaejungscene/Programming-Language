@@ -31,7 +31,9 @@ print("="*50)
 def func(x):
     return x>0
 
-number_list = range(-5, 5)
+number_list = range(-5, 5) # -5~4
+# print([i for i in number_list])
+
 result = filter(func, number_list)
 for r in result:
     print(r)
