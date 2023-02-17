@@ -12,4 +12,11 @@ int main(int argc, char **argv)
     string last = "lee";
     string full = first + " " + last;
     cout << full << endl;
+
+    cout << first[1] << endl;
+    cout << "------------------------------" << endl;
+
+    cout << first[-1] << endl;
+    cout << "hello" << endl;
+    return 0;
 }

@@ -23,6 +23,5 @@ int main(int argc, char **argv)
 
     temp = 13<<1;
     cout << temp << endl; // 26
-
     return 0;
 }
