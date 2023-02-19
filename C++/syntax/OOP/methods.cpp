@@ -15,6 +15,12 @@ class MyClass{
         }
 
         void outsideMethod();
+        void setPrivateatt(int privateatt){
+            this->privateatt = privateatt;
+        }
+        int getPrivateatt(){
+            return this->privateatt;
+        }
 };
 
 void MyClass::outsideMethod(){
@@ -28,5 +34,7 @@ int main(int argc, char **argv)
     ob.outsideMethod();
     cout << ob.publicatt <<endl;
     // cout << ob.privateatt << endl;
+    ob.setPrivateatt(423);
+    cout << "privateatt of ob is: " << ob.getPrivateatt() <<endl;
     return 0;
 }
