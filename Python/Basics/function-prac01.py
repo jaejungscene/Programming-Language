@@ -25,6 +25,8 @@ def fn(**a):
     print (i)
     print(type(i))
 fn(numbers=5,colors="blue",fruits="apple")
+args = {"number":5, "colors":"blue", "fruits":"apple"}
+fn(**args)
 # Output:
 # ('numbers', 5)
 # ('colors', 'blue')
