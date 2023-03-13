@@ -9,7 +9,7 @@ cached_items = {}
 
 def cached(func):
     def wrapper(*args, **kwargs):
-        global cached_item
+        global cached_items
         if func.__name__ not in cached_items:
             cached_items[func.__name__] = func(*args, **kwargs)
         return cached_items[func.__name__]
