@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.stream.Collectors;
 
 public class ListTest
 {
@@ -33,7 +34,12 @@ public class ListTest
       removeItems(list1, 4, 7); // remove items 4-6 from list
       printList(list1); // print list1 elements
       printReversedList(list1); // print list in reverse order
-   } 
+
+      System.out.println("\n-----------------------------");
+      System.out.println(list1);
+      System.out.println(list1.stream().map(x->x+"-h").collect(Collectors.toList()));
+      System.out.println(list1.stream().filter(x->x.charAt(0)>'B').collect(Collectors.toList()));
+   }
 
    // output List contents
    private static void printList(List<String> list)
