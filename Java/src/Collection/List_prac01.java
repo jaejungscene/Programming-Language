@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.stream.Collectors;
 
-public class ListTest
+public class List_prac01
 {
    public static void main(String[] args)
    {
