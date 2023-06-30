@@ -1,12 +1,10 @@
 
-console.log(x); // undefined
 var x=5;
-console.log(x); // 5
+console.log("x is "+x); // 5
 //오류 안뜸
 
-console.log(k);
 let k=5;
-console.log(k);
+console.log("k is "+k);
 //오류 뜸
 
 {
@@ -14,6 +12,19 @@ console.log(k);
   let p = 110;
   const q = 111;
 }
+
 console.log(w); // 321
-console.log(p); // Uncaught ReferenceError: p is not defined
-console.log(q); // Uncaught ReferenceError: p is not defined
+
+try{
+  console.log(p); // Uncaught ReferenceError: p is not defined
+}
+catch(err){
+  console.log(`${err} From let p`);
+}
+
+try{
+  console.log(q); // Uncaught ReferenceError: p is not defined
+}
+catch(err){
+  console.log(`${err} From const q`);
+}
