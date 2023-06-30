@@ -1,16 +1,27 @@
 import { getNumberClass, getFunction, getClass } from "./export_functions.js";
 
-var {id} = getNumberClass();
+let id, name;
+
+let temp = getNumberClass();
+console.log(temp);
+console.log("---------------------------------");
+
+({id} = getNumberClass());
 console.log(id);
+console.log("---------------------------------");
 
-var {name} = getNumberClass();
+({name} = getNumberClass());
 console.log(name);
+console.log("---------------------------------");
 
-var{id, name} = getNumberClass();
+({id, name} = getNumberClass());
 console.log(`${name} is ${id}`);
+console.log("---------------------------------");
 
-var getFunc = getFunction();
+let getFunc = getFunction();
 getFunc();
+console.log("---------------------------------");
 
-var Rect = getClass();
+let Rect = getClass();
 console.log(Rect.width);
+console.log("---------------------------------");
