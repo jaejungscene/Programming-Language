@@ -30,7 +30,8 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}/bin/${fileBasenameNoExtension}"
+                "/Users/jaejungscene/Projects/Programming_Language/C++/bin/${fileBasenameNoExtension}",
+                // "${fileDirname}/bin/${fileBasenameNoExtension}"
                 // "/Users/jaejungscene/Projects/Programming_Language/C++/bin/${fileBasenameNoExtension}"
             ],
             "group": "build",
@@ -45,7 +46,7 @@
         {//RUN test
             "type": "shell",
             "label": "RUN file",
-            "command": "${fileDirname}/bin/${fileBasenameNoExtension}",
+            "command": "/Users/jaejungscene/Projects/Programming_Language/C++/bin/${fileBasenameNoExtension}",
             "options": {
                 "cwd": "${fileDirname}"
             },

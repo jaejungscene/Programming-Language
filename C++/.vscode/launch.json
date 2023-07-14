@@ -8,7 +8,8 @@
             "type": "lldb",
             "request": "launch",
             "name": "Debug",
-            "program": "${fileDirname}/bin/${fileBasenameNoExtension}",
+            "program": "/Users/jaejungscene/Projects/Programming_Language/C++/bin/${fileBasenameNoExtension}",
+            // "program": "${fileDirname}/bin/${fileBasenameNoExtension}",
             "args": [],
             "cwd": "${workspaceFolder}"
         }
