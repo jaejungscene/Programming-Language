@@ -5,7 +5,9 @@ package syntax;
  * RecordRectangle() and ClassRectangle() is same!!
  */
 
-record RecordRectangle(double length, double width) { }
+record RecordRectangle(
+    double length, double width
+) { }
 
 final class ClassRectangle {
     private final double length;

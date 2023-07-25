@@ -6,10 +6,10 @@ import time
 # print(size)
 # print(type(size))
 
-x = 3000
-y = 500
+x, y = gui.position()
 flag = True
 while True:
+    # print(x, y)
     gui.moveTo(x,y)
     gui.mouseDown()
     gui.mouseUp()
