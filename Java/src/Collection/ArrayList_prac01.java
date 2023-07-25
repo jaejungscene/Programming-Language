@@ -1,6 +1,7 @@
 package Collection;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -16,5 +17,9 @@ public class ArrayList_prac01 {
 
         logger.log(Level.INFO, String.valueOf(list));
 
+        // non synchronized
+        ArrayList l1 = new ArrayList();
+        // Synchronized
+        List l = Collections.synchronizedList(l1);
     }
 }
