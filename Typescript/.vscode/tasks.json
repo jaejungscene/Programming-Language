@@ -1,0 +1,32 @@
+{
+  "tasks":[
+    { // run
+      "type": "shell",
+      "label": "npx ts-node: run - current file",
+      "command": "npx",
+      "args": [
+        "ts-node",
+        "${file}"
+      ],
+      "problemMatcher": [],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+    },
+
+    { // compile
+      "type": "shell",
+      "label": "tsc: compile - current file",
+      "command": "tsc",
+      "args": [
+        "${file}"
+      ],
+      "problemMatcher": [],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+    }
+  ]
+}
