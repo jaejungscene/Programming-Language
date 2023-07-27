@@ -1,0 +1,18 @@
+{
+  "tasks":[
+    {
+      "type": "shell",
+      "label": "go: run - current file",
+      "command": "go",
+      "args": [
+        "run",
+        "${file}"
+      ],
+      "problemMatcher": [],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+    }
+  ]
+}
