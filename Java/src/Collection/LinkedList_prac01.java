@@ -1,10 +1,7 @@
 //  ListTest.java
 // Lists, LinkedLists and ListIterators.
 package Collection;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class LinkedList_prac01
@@ -39,6 +36,15 @@ public class LinkedList_prac01
       System.out.println(list1);
       System.out.println(list1.stream().map(x->x+"-h").collect(Collectors.toList()));
       System.out.println(list1.stream().filter(x->x.charAt(0)>'B').collect(Collectors.toList()));
+      System.out.println("--------------------------------");
+
+      Queue<int[]> q = new LinkedList<>();
+      int[] poin = new int[2];
+      q.offer(new int[]{1,2});
+      q.offer(new int[]{31,243});
+      System.out.println(Arrays.toString(q.poll()));
+      System.out.println(Arrays.toString(q.poll()));
+      System.out.println(Arrays.toString(q.poll()));
    }
 
    // output List contents

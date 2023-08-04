@@ -16,10 +16,17 @@ public class ArrayList_prac01 {
         list.add(-1);
 
         logger.log(Level.INFO, String.valueOf(list));
+        logger.log(Level.INFO,"-------------------------------");
 
         // non synchronized
-        ArrayList l1 = new ArrayList();
+        ArrayList<String> l1 = new ArrayList<>();
+
         // Synchronized
-        List l = Collections.synchronizedList(l1);
+        List<String> l = Collections.synchronizedList(l1);
+        
+        // Synchronize non-synchronized list l1.add
+        synchronized(l){
+            l1.add("asdf");
+        }
     }
 }

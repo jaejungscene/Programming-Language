@@ -1,4 +1,4 @@
-package Design_pattern.builder;
+package Design_pattern.Creational.builder;
 
 public class Computer {
 

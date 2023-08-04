@@ -1,4 +1,4 @@
-package Design_pattern.strategy;
+package Design_pattern.Behavioral.strategy;
 
 interface SearchStrategy {
   public String search();
