@@ -1,29 +1,19 @@
 package Design_pattern.Behavioral.strategy;
 
-interface SearchStrategy {
-  public String search();
+public interface SearchStrategy {
+    public void search();
 }
 
-class SearchStrategyALL implements SearchStrategy{
-  public String search(){
-    return "--ALL--";
-  }
+class SearchStrategyAll implements  SearchStrategy{
+    public void search() {
+        System.out.println("search ALL");
+        // ...
+    }
 }
 
-class SearchStrategyIMAGE implements SearchStrategy{
-  public String search(){
-    return "--IMAGE--";
-  }
-}
-
-class SearchStrategyNEWS implements SearchStrategy{
-  public String search(){
-    return "--NEWS--";
-  }
-}
-
-class SearchStrategyMAP implements SearchStrategy{
-  public String search(){
-    return "--MAP--";
-  }
+class SearchStrategyImage implements SearchStrategy {
+    public void search() {
+        System.out.println("search IMAGE");
+        // ...
+    }
 }

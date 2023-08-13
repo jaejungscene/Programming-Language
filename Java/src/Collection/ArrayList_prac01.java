@@ -15,8 +15,19 @@ public class ArrayList_prac01 {
         list.add(523);
         list.add(-1);
 
-        logger.log(Level.INFO, String.valueOf(list));
-        logger.log(Level.INFO,"-------------------------------");
+        System.out.println(list);
+        System.out.println("---------------------------");
+
+        list.add(0, 52);
+
+        System.out.println(list);
+        System.out.println("---------------------------");
+
+        list.add(2, 489);
+
+        System.out.println(list);
+        System.out.println("---------------------------");
+
 
         // non synchronized
         ArrayList<String> l1 = new ArrayList<>();

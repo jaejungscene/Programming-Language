@@ -1,25 +1,28 @@
 package Design_pattern.Behavioral.strategy;
 
-import javax.swing.JButton;
-import java.awt.event.ActionEvent;
+public class SearchButton {
+    private MyProgram myProgram;
 
-public class SearchButton extends JButton{
-  private MyProgram myProgram;
+    public SearchButton(MyProgram myProgram) {
+        this.myProgram = myProgram;
+    }
 
-  private SearchStrategy searchStrategy = new SearchStrategyALL(); //초기화는 all 검색
+    private SearchStrategy searchStrategy = new SearchStrategyAll(); //default search strategy
 
-  SearchButton(MyProgram _myProgram){
-    myProgram = _myProgram;
-    setText("Search");
-    addActionListener((ActionEvent e)->{
-      String str1 = searchStrategy.search();
-      String str2 = (myProgram.getSearchArea()).getText();
-      myProgram.setOutputArea(String.format("%s\n%s", str1, str2));
-    });
-  }
+    public void setSearchStrategy(SearchStrategy searchStrategy) {
+        this.searchStrategy = searchStrategy;
+    }
 
-  public void setSearchStrategy(SearchStrategy _searchStrategy){
-    this.searchStrategy = _searchStrategy;
-  }
-
+    public void onClick() {
+        searchStrategy.search();
+        /*
+        if(myProgram.mode == Mode.ALL){
+            System.out.println("search ALL");
+            // ...
+        } else if (myProgram.mode == Mode.IMAGE) {
+            System.out.println("search IMAGE");
+            // ...
+        }
+        */
+    }
 }

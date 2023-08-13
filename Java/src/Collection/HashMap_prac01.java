@@ -1,5 +1,7 @@
 package Collection;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 
 
@@ -34,6 +36,8 @@ public class HashMap_prac01 {
         System.out.println(hm.get(4));
         hm.put(4, "diff");
         System.out.println(hm);
+        System.out.println(new ArrayList<String>(hm.values()));
+        System.out.println(Arrays.toString(hm.values().toArray()));
         System.out.println("--------------------");
 
         HashMap<MyInteger, String> myHm = new HashMap<>();
