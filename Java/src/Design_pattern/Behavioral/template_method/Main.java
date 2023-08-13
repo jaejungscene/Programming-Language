@@ -2,6 +2,7 @@ package Design_pattern.Behavioral.template_method;
 //추상 클래스 선생님
 abstract class Teacher{
 
+    // 공통된 절차
     public void start_class() {
         inside();
         attendance();
