@@ -3,6 +3,7 @@ package Collection;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.function.IntFunction;
 
 
 class MyInteger{
@@ -38,6 +39,7 @@ public class HashMap_prac01 {
         System.out.println(hm);
         System.out.println(new ArrayList<String>(hm.values()));
         System.out.println(Arrays.toString(hm.values().toArray()));
+        System.out.println(hm.values().toArray().getClass());
         System.out.println("--------------------");
 
         HashMap<MyInteger, String> myHm = new HashMap<>();
@@ -52,6 +54,16 @@ public class HashMap_prac01 {
 
         System.out.println(new MyInteger(2).hashCode());
         System.out.println(new MyInteger(41).hashCode());
+
+        HashMap<Integer, Integer> hm3 = new HashMap<>();
+        hm3.put(12, 42);
+        hm3.put(42, 142);
+        int[] array = new int[hm3.size()];
+        IntFunction intFunc = (x) -> x;
+        array = hm3.values().stream().mapToInt(x->x).toArray();
+        System.out.println(array.getClass());
+
+        //.stream().map((x) -> (int)x).toA
 
     }
 }

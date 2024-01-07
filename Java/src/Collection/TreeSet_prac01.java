@@ -6,7 +6,12 @@ import java.util.TreeSet;
 
 public class TreeSet_prac01 {
     public static void main(String[] args) {
-        //Specify TreeSet
+        /**
+         * TreeSet is basically an implementation of
+         * a self-balancing binary search tree like a Red-Black Tree.
+         * Therefore operations like add, remove, and search takes O(log(N)) time.
+         */
+                //Specify TreeSet
         TreeSet<Integer> set1 = new TreeSet<Integer>(Arrays.asList(1,2,3));//TreeSet생성
         TreeSet<Integer> set2 = new TreeSet<Integer>(set1);//set1의 모든 값을 가진 TreeSet생성
 
@@ -14,6 +19,7 @@ public class TreeSet_prac01 {
         set1.add(4);
         set1.add(9);
         set1.add(6);
+        set1.add(5);
         set1.add(5);
 
         System.out.println(set1);

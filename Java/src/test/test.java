@@ -1,74 +1,32 @@
 package test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.IntStream;
 
 public class test {
-    static public boolean primeNumCheck(int n){
-        if(n==0 || n==1)	return false;
-        for(int i=3; i<=(int)Math.sqrt(n); i+=2)
-            if(n%i == 0)	return false;
-        return true;
-    }
     public static void main(String[] args) {
-        System.out.println(primeNumCheck(2));
-        System.out.println((int)Math.sqrt(3));
-        System.out.println("-----------------");
-        System.out.println("asdf".substring(0, 0));
-        System.out.println("asdf".substring(1));
-        System.out.println(Integer.valueOf("11")==11);
-        System.out.println(Integer.parseInt("11")==11);
-        HashSet<Integer> set = new HashSet<>();
-        set.add(123);
-        set.add(2);
-        set.add(42);
-        for(Integer i: set){
-            System.out.println(i);
-        }
+        Queue<Integer> arrInt = new LinkedList<>();
+        Stack<int[]> arrIntarr = new Stack<>();
 
+        arrInt.add(12);
+        Integer i = arrInt.peek();
+        i++;
+        System.out.println(arrInt);
+        System.out.println(i);
 
-        int[][] dungeons = {{90,20}, {80,10}, {75,30}};
-        int k = 90;
-        List<int[]> scores = new ArrayList<>(dungeons.length);
-        
-        for(int i=0; i<dungeons.length; i++){
-            int[] temp = {
-                (dungeons[i][0]-dungeons[i][1]),
-                i,
-                dungeons[i][1]
-            };
-            scores.add(temp);
-        }
-        
-        scores.sort(new test.CustomComparator());
-        for(int []p: scores){
-            System.out.println(p[0] + " " + p[1]);
-        }
+        arrIntarr.push(new int[]{1,4});
+        int[] a = arrIntarr.peek();
+        a[0] = 74;
+        arrIntarr.stream().forEach((x)->{System.out.println(Arrays.toString(x));});
+        System.out.println(Arrays.toString(a));
 
+        StringBuilder answer = new StringBuilder();
+        answer.append("asdf");
+        answer.append("zxcv");
+        System.out.println(answer);
 
-        // List<int[]> arr = new ArrayList<>();
-        // for(int i=0; i<input.length; i++){
-        //     int[] elem = {input[i], i};
-        //     arr.add(elem);
-        // }
-        // arr.sort(new Comparator<int []>() {
-        //     public int compare(int[] a, int[] b) {
-        //         return Integer.compare(a[0], b[0]);
-        //     }
-        // });
-        // System.out.println("-----------");
-        
-        // System.out.println(arr);
-        // System.out.println(arr.size());
-
-
-        //&& dungeons[p[1]][1] > dungeons[scores.get(i+1)[1]][1]
-        //&& p[0] == scores.get(i+1)[0]
+        String s = "3132";
+        System.out.println(s.compareTo("31"));
     }
 
     static class CustomComparator implements Comparator<int[]>{
