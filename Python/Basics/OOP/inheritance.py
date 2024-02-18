@@ -18,8 +18,10 @@ class Cat(Pet):
     super().__init__(name, age, "Mewo", "Cat")
 
 my_pet = Pet(name="jae", sound="mwe", age=12, type="cat")
+print(my_pet)
 print(type(my_pet))
 print(f"{my_pet.age}, {my_pet.name}, {my_pet.sound}, {my_pet.type}")
+print('-'*100)
 
 
 # like "implements"

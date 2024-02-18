@@ -1,0 +1,27 @@
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    transition: background-color 0.1s ease; /* Smooth transition for color change */
+}
+
+#colorButton {
+    display: none; /* Hide the checkbox */
+}
+
+#colorButton:checked + label + .square {
+    animation: colorChange 5s forwards; /* Run the color change animation for 20 seconds */
+}
+
+@keyframes colorChange {
+    0%,
+    100% {
+        background-color: green; /* Start and end with green color */
+    }
+    10%, 30%, 50%, 70%, 90% {
+        background-color: red; /* Change to red halfway through */
+    }
+    20%, 40%, 60%, 80% {
+        background-color: white; /* Transition to white gradually after 10 seconds */
+    }
+}

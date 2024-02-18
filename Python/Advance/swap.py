@@ -1,12 +1,12 @@
 def swap1(x, y):
-  temp = x
-  x = y
-  y = temp
+    temp = x
+    x = y
+    y = temp
 
 def swap2(x, y):
-  temp = x[0]
-  x[0] = y[0]
-  y[0] = temp
+    temp = x[0]
+    x[0] = y[0]
+    y[0] = temp
 
 x = 1
 y = 2
