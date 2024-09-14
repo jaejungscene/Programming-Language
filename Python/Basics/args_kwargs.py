@@ -21,9 +21,15 @@ bar(name='one', age=27)
 # name one
 # age 27
 
-
-def foo(kind, *args, **kwargs):
-   pass
+print("-----")
+def func1(arg1, arg2, *args, **kwargs):
+   print(arg1, arg2)
+   print(args)
+   print(kwargs)
+temp1 = [1,2,3]
+temp = {"a":1,"b":2}
+func1(1, 2, *[*temp1, 5], **{**temp, "e":3})
+print("-----")
 
 
 
